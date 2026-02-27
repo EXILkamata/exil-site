@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="会社概要 | 合同会社EXIL">
+  <section class="container" style="padding:70px 20px;">
+    <div class="badge">Company</div>
+    <h1 class="h1">会社概要</h1>
+    <p class="p" style="max-width:760px;">
+      合同会社EXILは、RHELを中心としたインフラ設計・構築を専門とする少数精鋭の技術集団です。<br/>
+      クラウド、仮想化まで幅広く対応し、安定性と拡張性を両立した基盤づくりを支援します。
+    </p>
+
+    <hr class="hr" />
+
+    <!-- 基本情報（単独カード） -->
+    <div class="card" style="max-width:1060px;">
+      <h2 class="h2">基本情報</h2>
+      <table style="width:100%;border-collapse:collapse;color:var(--muted);">
+        <tbody>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);width:32%;">会社名</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">合同会社EXIL</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">適格請求書発行事業者登録番号</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">T6010803002772</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">設立</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">2018年8月21日</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">資本金額</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">10,000,000円</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">代表者名</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">鎌田 浩臣</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">所在地</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">〒144-0051&nbsp;&nbsp;東京都大田区西蒲田8-24-1</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">事業内容</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">インフラ受託開発／インフラ構築／インフラSES</td></tr>
+          <tr><td style="padding:10px 0;border-bottom:1px solid var(--line);">主要取引先</td><td style="padding:10px 0;border-bottom:1px solid var(--line);color:var(--text);">有限会社ワイズクリエイティブ&nbsp;&nbsp;他</td></tr>
+          <tr><td style="padding:10px 0;">連絡先</td><td style="padding:10px 0;"><a href="/contact" style="color:var(--text);text-decoration:underline;">お問い合わせページ</a></td></tr>
+        </tbody>
+      </table>
+
+      <p class="small" style="margin-top:12px;">
+        コンプライアンスは <a href="/compliance" style="color:var(--text);text-decoration:underline;">こちら</a>
+
+      </p>
+    </div>
+
+    <!-- 会社沿革（左）＋ 方針（右） -->
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); margin-top:30px;">
+
+      <div class="card">
+        <h2 class="h2">会社沿革</h2>
+        <table style="width:100%;border-collapse:collapse;color:var(--muted);">
+          <tbody>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);width:28%;">2018年08月21日</td>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--text);">個人事業主を経て合同会社EXILを設立</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);width:28%;">2022年08月22日</td>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--text);">資本金を200万円に増資</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);width:28%;">2023年10月01日</td>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--text);">適格請求書発行事業者登録番号を取得</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);width:28%;">2024年09月18日</td>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--text);">資本金を600万円に増資</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);width:28%;">2025年09月08日</td>
+              <td style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--text);">資本金を1,000万円に増資</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">方針</h2>
+        <p class="p">運用まで見据えた設計と、属人化しないドキュメント整備を重視します。</p>
+        <ul style="color:var(--muted);line-height:1.9;margin:14px 0 0;padding-left:18px;">
+          <li>無理のない構成・段階的な改善</li>
+          <li>設計書・手順書・構成図の整備</li>
+          <li>拡張性と運用性のバランス</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

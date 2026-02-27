@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="container" style="padding:80px 20px;">
+
+    <!-- 文字ブロック：幅を揃える -->
+    <div style="max-width:960px; margin:0 auto;">
+      <div class="badge">RHEL / Virtualization / Cloud</div>
+
+      <h1 class="h1">
+        仮想からクラウドまで<br/>
+        企業基盤を支える、確かなインフラ技術
+      </h1>
+
+      <p class="p" style="max-width:720px;">
+        合同会社EXILは、インフラ設計・構築を専門とする技術パートナーです。<br/>
+        RHELを中心とし、オンプレミス、仮想基盤、クラウドまで、安定性と拡張性を両立した基盤を構築します。
+      </p>
+    </div>
+
+    <!-- 画像：同じ幅のコンテナ内に置く -->
+    <div style="max-width:960px; margin:34px auto 0;">
+      <img
+        src="/hero.svg"
+        alt="インフラ構築イメージ"
+        style="
+          width:100%;
+          height: 300px;
+          object-fit: cover;
+          display:block;
+          border-radius:22px;
+          box-shadow:0 20px 40px rgba(0,0,0,.10);
+        "
+      />
+    </div>
+
+  </section>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="サービス | 合同会社EXIL">
+  <section class="container" style="padding:70px 20px;">
+    <div class="badge">Services</div>
+    <h1 class="h1">サービス</h1>
+    <p class="p" style="max-width:760px;">
+      合同会社EXILは、RHELを中心にクラウド・仮想化まで対応し、インフラの設計・構築・支援を行います。<br/>
+      「要件整理から一緒に」でも、「設計/構築だけ」でも柔軟に対応します。
+    </p>
+
+    <hr class="hr" />
+
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="card">
+        <div class="badge">受託</div>
+        <h2 class="h2">インフラ受託開発</h2>
+        <p class="p">要件定義〜設計〜構築まで一貫して対応。<br/>RHEL環境を軸に、運用を見据えた構成をご提案します。</p>
+        <ul style="color:var(--muted);line-height:1.9;margin:14px 0 0;padding-left:18px;">
+          <li>RHEL基盤設計・構築</li>
+          <li>運用設計（監視/バックアップ/権限）</li>
+          <li>構成図・設計書・手順書作成</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="badge">構築</div>
+        <h2 class="h2">インフラ構築・刷新</h2>
+        <p class="p">新規構築、リプレース、移行、ハイブリッド構成まで、止めないための設計を重視します。</p>
+        <ul style="color:var(--muted);line-height:1.9;margin:14px 0 0;padding-left:18px;">
+          <li>クラウド（AWS/Azure 等）設計・構築</li>
+          <li>仮想化（VMware/KVM 等）設計・構築</li>
+          <li>更改・移行・性能/可用性設計</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="badge">SES</div>
+        <h2 class="h2">インフラSES支援</h2>
+        <p class="p">設計支援・構築支援・検証（PoC）など、プロジェクトの不足部分を補完します。</p>
+        <ul style="color:var(--muted);line-height:1.9;margin:14px 0 0;padding-left:18px;">
+          <li>基本/詳細設計支援</li>
+          <li>構築・テスト支援</li>
+          <li>技術検証・ドキュメント整備</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="hr" />
+
+    <div class="card" style="display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;">
+      <div>
+        <h2 class="h2" style="margin:0 0 6px;">技術スタック</h2>
+        <p class="p">RHEL / Linux、クラウド、仮想化を中心に、要件に合わせて最適な構成をご提案します。</p>
+      </div>
+      <a class="btn" href="/contact">相談してみる</a>
+    </div>
+  </section>
+</BaseLayout>
