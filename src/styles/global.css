@@ -93,19 +93,31 @@ header nav a:hover {
   }
 
 }
-/* ===== Mobile Optimize (header + hero) ===== */
+/* ===== Header: mobile 2-row (no Header.astro change) ===== */
 @media (max-width: 768px) {
-  /* ヘッダーを圧縮 */
+  /* ヘッダー全体を縦積みに */
   header {
-    padding: 10px 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    padding: 12px 16px !important;
   }
 
-  /* ロゴを少し小さく */
-  header img {
-    height: 26px !important;
+  /* もし header 内に .container がある場合（多くのテンプレである） */
+  header .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
   }
 
-  /* ナビを“横スクロール”にして縦書き崩れを防ぐ（ハンバーガー無しで楽） */
+  /* 1段目（ロゴ＋会社名っぽいブロック）を横並びに */
+  header a {
+    white-space: nowrap;
+  }
+
+  /* 2段目：ナビを横スクロール（折り返し＝縦書き崩れ防止） */
   header nav {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -116,81 +128,21 @@ header nav a:hover {
   }
 
   header nav a {
-    white-space: nowrap !important; /* 文字を折り返さない */
+    white-space: nowrap !important;
     font-size: 13px !important;
-    padding: 6px 8px;
+    padding: 6px 8px !important;
   }
 
-  /* お問い合わせボタンだけは押しやすく少し強調（クラスがあるなら最適化可能） */
-  header nav .btn,
+  /* お問い合わせボタンが header 内にある想定 */
   header .btn {
     padding: 8px 14px !important;
     border-radius: 999px !important;
     font-size: 13px !important;
   }
 
-  /* ヒーローの余白を詰める */
-  .container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  /* 既に効いてるけど、もう少しスマホ寄せに調整 */
-  h1, .h1 {
-    font-size: 28px !important;
-    line-height: 1.25 !important;
-    letter-spacing: -0.02em;
-  }
-
-  .p {
-    font-size: 15px !important;
-    line-height: 1.9 !important;
-  }
-}
-/* ===== header: mobile 2-row layout ===== */
-@media (max-width: 768px) {
-  /* ヘッダーを2段構成に */
-  header.site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 12px 16px;
-  }
-
-  /* 1段目：ロゴ＋会社名 */
-  header.site-header .brand {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-  }
-
-  header.site-header .brand img {
-    height: 28px; /* ロゴをスマホ用に */
-    width: auto;
-  }
-
-  /* 2段目：メニュー */
-  header.site-header .nav {
-    display: flex;
-    flex-wrap: nowrap;        /* 折り返さない */
-    gap: 10px;
-    overflow-x: auto;         /* 収まらない分は横スクロール */
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 6px;
-  }
-
-  header.site-header .nav a {
-    white-space: nowrap;      /* 文字を縦に折らせない */
-    font-size: 13px;
-    padding: 6px 8px;
-  }
-
-  /* お問い合わせボタンもスマホで押しやすく */
-  header.site-header .nav .btn {
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 13px;
+  /* ロゴ画像があれば少し縮小 */
+  header img {
+    height: 28px !important;
+    width: auto !important;
   }
 }
