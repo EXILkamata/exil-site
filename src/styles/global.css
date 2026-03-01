@@ -147,3 +147,50 @@ header nav a:hover {
     line-height: 1.9 !important;
   }
 }
+/* ===== header: mobile 2-row layout ===== */
+@media (max-width: 768px) {
+  /* ヘッダーを2段構成に */
+  header.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  /* 1段目：ロゴ＋会社名 */
+  header.site-header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  header.site-header .brand img {
+    height: 28px; /* ロゴをスマホ用に */
+    width: auto;
+  }
+
+  /* 2段目：メニュー */
+  header.site-header .nav {
+    display: flex;
+    flex-wrap: nowrap;        /* 折り返さない */
+    gap: 10px;
+    overflow-x: auto;         /* 収まらない分は横スクロール */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  header.site-header .nav a {
+    white-space: nowrap;      /* 文字を縦に折らせない */
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  /* お問い合わせボタンもスマホで押しやすく */
+  header.site-header .nav .btn {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+  }
+}
