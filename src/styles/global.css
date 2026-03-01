@@ -78,43 +78,6 @@ header nav a:hover {
 /* ===== モバイル最適化 ===== */
 @media (max-width: 768px) {
 
-  .h1 {
-    font-size: 30px;
-    line-height: 1.25;
-  }
-
-  .p {
-    font-size: 15px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  header {
-    padding: 12px 16px;
-  }
-
-  header img {
-    height: 28px; /* ロゴ縮小 */
-  }
-
-  header nav {
-    font-size: 14px;
-    gap: 10px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  position: sticky;
-  top: 0;
-}
-
-/* ===== スマホ強制上書き ===== */
-@media (max-width: 768px) {
-
   h1,
   .h1 {
     font-size: 28px !important;
@@ -129,4 +92,58 @@ header nav a:hover {
     height: 28px !important;
   }
 
+}
+/* ===== Mobile Optimize (header + hero) ===== */
+@media (max-width: 768px) {
+  /* ヘッダーを圧縮 */
+  header {
+    padding: 10px 14px !important;
+  }
+
+  /* ロゴを少し小さく */
+  header img {
+    height: 26px !important;
+  }
+
+  /* ナビを“横スクロール”にして縦書き崩れを防ぐ（ハンバーガー無しで楽） */
+  header nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  header nav a {
+    white-space: nowrap !important; /* 文字を折り返さない */
+    font-size: 13px !important;
+    padding: 6px 8px;
+  }
+
+  /* お問い合わせボタンだけは押しやすく少し強調（クラスがあるなら最適化可能） */
+  header nav .btn,
+  header .btn {
+    padding: 8px 14px !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
+  }
+
+  /* ヒーローの余白を詰める */
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* 既に効いてるけど、もう少しスマホ寄せに調整 */
+  h1, .h1 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em;
+  }
+
+  .p {
+    font-size: 15px !important;
+    line-height: 1.9 !important;
+  }
 }
